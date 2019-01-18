@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>search and sort datagrid | vue 2.0</title>
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+  </head>
+
+  <body>
+
+    <div id="v-for-object">
+      <datatable :items="items"></datatable>
+    </div>
+    <template id="datatable">
+      <div>
+        <input v-model="searchKey" class="searchBox" placeholder="Search...">
+        <table>
+          <tr>
+            <!-- <th @click="columnSort('name',toggleSortOrder, 'head-name')"
+              id="head-name">
+              <span>Name</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('prename',toggleSortOrder, 'head-prename')"
+              id="head-prename">
+              <span>Prename</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('age',toggleSortOrder,'head-age')"
+              id="head-age">
+              <span>Age</span>
+              <div class="arrow_box"></div></th> -->
+
+            <th @click="columnSort('memberNum',toggleSortOrder,
+              'head-memberNum')" id="head-memberNum">
+              <span>Member #</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('orgType',toggleSortOrder, 'head-orgType')"
+              id="head-orgType">
+              <span>Type of Business</span>
+              <div class="arrow_box"></div></th>
+              <th @click="columnSort('name',toggleSortOrder, 'head-name')"
+              id="head-name">
+              <span>Entity Name</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('mission',toggleSortOrder, 'head-mission')"
+              id="head-mission">
+              <span>Mission</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('contact',toggleSortOrder, 'head-contact')"
+              id="head-contact">
+              <span>Contact</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('gender',toggleSortOrder, 'head-gender')"
+              id="head-gender">
+              <span>Gender</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('address',toggleSortOrder,'head-address')"
+              id="head-address">
+              <span>Address</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('city',toggleSortOrder, 'head-city')"
+              id="head-city">
+              <span>City</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('state',toggleSortOrder, 'head-state')"
+              id="head-state">
+              <span>State</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('zip',toggleSortOrder,'head-zip')"
+              id="head-zip">
+              <span>Zip</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('country',toggleSortOrder, 'head-country')"
+              id="head-country">
+              <span>Country</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('phoneNum',toggleSortOrder, 'head-phoneNum')"
+              id="head-phoneNum">
+              <span>Phone #</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('email',toggleSortOrder,'head-email')"
+              id="head-email">
+              <span>Email</span>
+              <div class="arrow_box"></div></th>
+            <th @click="columnSort('website',toggleSortOrder,'head-website')"
+              id="head-website">
+              <span>Website</span>
+              <div class="arrow_box"></div></th>
+          </tr>
+          <tr v-for="item in orderedList" class="row">
+            <td data-th="memberNum">{{item.memberNum}}</td>
+            <td data-th="orgType">{{item.orgType}}</td>
+            <td data-th="Name">{{item.name}}</td>
+            <td data-th="Mission">{{item.mission}}</td>
+            <td data-th="contact">{{item.contact}}</td>
+            <td data-th="gender">{{item.gender}}</td>
+            <td data-th="Address">{{item.address}}</td>
+            <td data-th="City">{{item.city}}</td>
+            <td data-th="State">{{item.state}}</td>
+            <td data-th="Zip">{{item.zip}}</td>
+            <td data-th="Country">{{item.country}}</td>
+            <td data-th="Phone #">{{item.phoneNum}}</td>
+            <td data-th="Email">{{item.email}}</td>
+            <td data-th="Website">{{item.website}}</td>
+          </tr>
+        </table>
+      </div>
+    </template>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js'></script>
+    <script
+      src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js'></script>
+    <script src="js/index.js"></script>
+
+
+
+
+  </body>
+
+</html>
