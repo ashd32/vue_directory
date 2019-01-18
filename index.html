@@ -3,12 +3,9 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>search and sort datagrid | vue 2.0</title>
-
-
+    <title>Search and Sort Data w/ Vue 2.0</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 
   </head>
 
@@ -22,19 +19,6 @@
         <input v-model="searchKey" class="searchBox" placeholder="Search...">
         <table>
           <tr>
-            <!-- <th @click="columnSort('name',toggleSortOrder, 'head-name')"
-              id="head-name">
-              <span>Name</span>
-              <div class="arrow_box"></div></th>
-            <th @click="columnSort('prename',toggleSortOrder, 'head-prename')"
-              id="head-prename">
-              <span>Prename</span>
-              <div class="arrow_box"></div></th>
-            <th @click="columnSort('age',toggleSortOrder,'head-age')"
-              id="head-age">
-              <span>Age</span>
-              <div class="arrow_box"></div></th> -->
-
             <th @click="columnSort('memberNum',toggleSortOrder,
               'head-memberNum')" id="head-memberNum">
               <span>Member #</span>
@@ -43,7 +27,7 @@
               id="head-orgType">
               <span>Type of Business</span>
               <div class="arrow_box"></div></th>
-              <th @click="columnSort('name',toggleSortOrder, 'head-name')"
+            <th @click="columnSort('name',toggleSortOrder, 'head-name')"
               id="head-name">
               <span>Entity Name</span>
               <div class="arrow_box"></div></th>
@@ -111,13 +95,10 @@
         </table>
       </div>
     </template>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js'></script>
     <script
-      src='http://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js'></script>
-    <script src="js/index.js"></script>
-
-
-
+      src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js'></script>
+    <script src="./js/index.js"></script>
 
   </body>
 
